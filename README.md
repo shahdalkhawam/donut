@@ -2,8 +2,13 @@
 
 A small OpenGL/FreeGLUT demo that renders a spinning torus (a donut-shaped 3D surface) with three display modes: points, lines, and a shadow-style ASCII view.
 
+<p align="left">
 
-<img width="1344" height="1083" alt="image" src="https://github.com/user-attachments/assets/b9a5060b-d85d-450f-88ad-f58138569db2" />
+<img width="1344/2" height="1083/2" alt="image" src="https://github.com/user-attachments/assets/b9a5060b-d85d-450f-88ad-f58138569db2" />
+<img width="1333/2" height="1081/2" alt="image" src="https://github.com/user-attachments/assets/f5140586-b0f7-4f4f-b79a-9563db5a8dab" />
+
+</p>
+
 
 
 
