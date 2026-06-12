@@ -3,20 +3,16 @@
 A small OpenGL/FreeGLUT demo that renders a spinning torus (a donut-shaped 3D surface) with three display modes: points, lines, and a shadow-style ASCII view.
 
 <p align="left">
-<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/5af8bfb5-119b-4a8f-8e77-c8025563faa3" />
-<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/b9a5060b-d85d-450f-88ad-f58138569db2" />
-<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/f5140586-b0f7-4f4f-b79a-9563db5a8dab" />
-<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/e621dd2c-e8f8-4973-987a-121a9c43888e" />
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/5af8bfb5-119b-4a8f-8e77-c8025563faa3" />
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/b9a5060b-d85d-450f-88ad-f58138569db2" />
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/f5140586-b0f7-4f4f-b79a-9563db5a8dab" />
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/e621dd2c-e8f8-4973-987a-121a9c43888e" />
 
 
 </p>
 
 
-
-
-## What this program does
-
-The program draws a parametrically defined torus in 3D and rotates it in real time using OpenGL transforms. The core math is based on the standard torus equations:
+The program draws a parametrically defined 3D torus in 3D rotating in real time using OpenGL transforms. The math is based on the standard torus equations:
 
 $$
 x = (R + r \cos \theta) \cos \phi
@@ -30,17 +26,12 @@ $$
 z = (R + r \cos \theta) \sin \phi
 $$
 
-Where:
-- $R$ is the major radius (distance from the center of the tube to the center of the torus)
-- $r$ is the minor radius (radius of the tube itself)
+- $R$ is the major radius (distance from the center of the tube to the center of the torus) -In this implementation $R = 0.75$
+- $r$ is the minor radius (radius of the tube itself)-In this implementation $r = 0.25$ 
 - $\theta$ sweeps around the tube cross-section
 - $\phi$ sweeps around the donut ring
 
-In this implementation, the defaults are:
-- $R = 0.75$
-- $r = 0.25$
-
-The code samples $\theta$ and $\phi$ in small increments, which creates a dense set of points on the torus surface.
+The code samples $\theta$ and $\phi$ in small increments, creating a dense set of points on the torus surface.
 
 ## The 3D math and rendering logic
 
@@ -109,18 +100,17 @@ Special keys:
 - `Up / Down` — increase / decrease rotation speed
 - `Left / Right` — adjust the major torus radius
 
-## Build
+## BUILD & RUN
 
 From the project root:
+Build with this command creating a runnable donut.exe :
 
 ```sh
 g++ main.cpp -o donut.exe -Iinclude -Llib -lfreeglut -lopengl32 -lglu32
 ```
 
 The project uses the local FreeGLUT headers and libraries in `include/` and `lib/`.
-
-## Run
-
+Run the donut.exe file:
 ```sh
 donut.exe
 ```
