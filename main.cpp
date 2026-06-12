@@ -25,6 +25,7 @@ void drawGlyphAtPoint(float x, float y, float z, char glyph, float r, float g, f
 const int screenWidth = 900;
 const int screenHeight = 700;
 const float pi = 3.14159265358979323846f;
+
 const char* shadowChars = " .:-=+*#%@";
 
 enum DisplayMode { MODE_POINTS, MODE_LINES, MODE_SHADOW };
